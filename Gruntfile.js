@@ -18,7 +18,8 @@ module.exports = function(grunt) {
         'tasks/*.js',
       ],
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: '.jshintrc',
+        reporterOutput: ''
       }
     },
 
