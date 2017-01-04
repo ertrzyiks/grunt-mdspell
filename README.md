@@ -68,6 +68,10 @@ Default value: `false`
 
 Ignores numbers such as `22nd`, `31st` - numbers without suffix, e.g. `345`, are always ignored.
 
+#### options.dictionary
+Type: `Object`
+Default value: `{language: 'en-gb'}`
+
 ### Usage Example
 
 In this example, a number of markdown files are spell checked with both acronyms and numbers ignored.
@@ -77,7 +81,10 @@ grunt.initConfig({
   mdspell: {
     options: {
       ignoreAcronyms: true,
-      ignoreNumbers: true
+      ignoreNumbers: true,
+      dictionary: {
+        language: 'en-gb'
+      }
     },
     files: {
       src: ['**/*.md']

@@ -40,6 +40,26 @@ module.exports = function(grunt) {
           src: ['test/fixtures/spellingError.md']
         }
       },
+      success_US: {
+        options: {
+          dictionary: {
+            language: 'en-us'
+          }
+        },
+        files: {
+          src: ['test/fixtures/noErrors_en-us.md']
+        }
+      },
+      spellingError_US: {
+        options: {
+          dictionary: {
+            language: 'en-us'
+          }
+        },
+        files: {
+          src: ['test/fixtures/spellingError_en-us.md']
+        }
+      },
       noError: {
         options: {
           ignoreAcronyms: true,

@@ -23,11 +23,16 @@ module.exports = function(grunt) {
 
     var options = this.options({
       ignoreAcronyms: false,
-      ignoreNumbers: false
+      ignoreNumbers: false,
+      dictionary: {
+        language: 'en-gb'
+      }
     });
 
     // fix very weird bug - https://github.com/chalk/chalk/issues/80
     chalk.red('foo');
+
+    spellcheck.initialise(options);
 
     // load the spelling configuration file
     spellConfig.initialise.bind(spellConfig)('./.spelling',
